@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NR-Zeo | Zeolita Natural para Agricultura</title>
+    
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación principal fija -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo de la empresa -->
+                <a class="navbar-brand" href="#home" data-page="home">
+                    <img src="img/logo.png" alt="NR-Zeo" height="50">
+                </a>
+                
+                <!-- Selector de idioma -->
+                <div class="language-selector d-flex me-3 order-lg-3">
+                    <button class="lang-btn btn" onclick="setLanguage('es')">ES</button>
+                    <button class="lang-btn btn ms-2" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn btn ms-2" onclick="setLanguage('ar')">AR</button>
+                </div>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Menú de navegación (ahora con enlaces modificados para carga dinámica) -->
+                <div class="collapse navbar-collapse order-lg-2" id="navbarMain">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home" data-page="home" data-translate="home"><i class="fas fa-home me-1"></i> <span>Inicio</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" data-page="about" data-translate="about"><i class="fas fa-info-circle me-1"></i> <span>Quiénes Somos</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products" data-page="products" data-translate="products"><i class="fas fa-box me-1"></i> <span>Productos</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#benefits" data-page="benefits" data-translate="benefits"><i class="fas fa-leaf me-1"></i> <span>Beneficios</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiments" data-page="experiments" data-translate="experiments"><i class="fas fa-flask me-1"></i> <span>Experimentos</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" data-page="contact" data-translate="contact"><i class="fas fa-envelope me-1"></i> <span>Contacto</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Contenedor principal de contenido -->
+    <div id="page-container">
+        <!-- Página de inicio -->
+        <div id="page-home" class="page-content active">
+            <main>
+                <!-- Sección de Inicio / Hero -->
+                <section class="hero-section">
+                    <div class="container">
+                        <div class="row align-items-center min-vh-80">
+                            <div class="col-lg-6">
+                                <h1 class="display-4 fw-bold mb-4" data-translate="homeTitle">Bienvenidos a NR-Zeo</h1>
+                                <p class="lead mb-5" data-translate="homeDesc">Expertos en zeolita natural para la agricultura, medio ambiente y la industria.</p>
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <a href="#about" data-page="about" class="btn btn-primary btn-lg px-4 py-3 nav-link-dynamic">
+                                        <span data-translate="learnMore">Conocer más</span>
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                    <a href="#contact" data-page="contact" class="btn btn-outline-primary btn-lg px-4 py-3 nav-link-dynamic">
+                                        <span data-translate="contactUs">Contáctanos</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0">
+                                <div id="mainCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="carousel-img-container">
+                                                <img src="img/zeolite1.jpg" class="d-block" alt="Zeolita Natural">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="carousel-img-container">
+                                                <img src="img/zeolite2.jpg" class="d-block" alt="Zeolita en Agricultura">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="carousel-img-container">
+                                                <img src="img/zeolite3.jpg" class="d-block" alt="Aplicaciones Industriales">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- Insertar aquí el contenido de about.html -->
+        <div id="page-about" class="page-content">
+            <main>
+                <!-- Banner superior -->
+                <section class="page-banner">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold" data-translate="aboutTitle">Quiénes Somos</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#home" data-page="home" data-translate="home">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" data-translate="about">Quiénes Somos</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+                
+                <!-- Sección principal de "Quiénes Somos" -->
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+                                <p class="lead mb-4" data-translate="aboutDesc">Somos líderes en la producción y exportación de zeolita natural, con aplicaciones en agricultura, filtración de agua y la industria.</p>
+                                <div class="mb-4 about-content" data-translate="aboutInfo">
+                                    Nuestra empresa tiene como objetivo proporcionar soluciones modernas a los problemas de los agricultores, elevar el costo y la calidad de la producción, y obtener productos naturales sin recurrir al uso excesivo de fertilizantes químicos, lo que a su vez daña el suelo y el medio ambiente.
+                                    <br><br>
+                                    * Desde 2018, nuestra empresa ha realizado docenas de experimentos de laboratorio y de campo para diferentes usos de la toba volcánica en colaboración con numerosos establecimientos de investigación y universidades (Bagdad, Samawa, Salah Al Din, Koufah y Al Anbar).
+                                    <br><br>
+                                    * Estos estudios demostraron el éxito de la utilización de la toba volcánica en diversos campos. Luego, pasamos a experimentos con agricultores y empresas agrícolas especializadas, que produjeron resultados excepcionales.
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img src="img/about.jpg" alt="Nuestra Empresa" class="img-fluid rounded-4 shadow-lg">
+                                    <div class="experience-badge">
+                                        <span class="years">5+</span>
+                                        <span class="text" data-translate="yearsExperience">Años de Experiencia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Insertar aquí contenido de products.html -->
+        <div id="page-products" class="page-content">
+            <main>
+                <!-- Banner superior -->
+                <section class="page-banner">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold" data-translate="productsTitle">Nuestros Productos</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#home" data-page="home" data-translate="home">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" data-translate="products">Productos</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Sección de introducción a los productos -->
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <p class="lead mb-4" data-translate="productsDesc">Ofrecemos zeolita en diferentes formatos: granular, polvo y en pellets.</p>
+                                <p data-translate="productsInfo">Nuestros productos son 100% naturales y están diseñados para satisfacer las necesidades de agricultores, industrias y proyectos ambientales.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Catálogo de productos -->
+                        <div class="row g-4">
+                            <!-- Producto 1 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card product-card h-100">
+                                    <img src="img/product1.jpg" class="card-img-top" alt="Zeolita Granular">
+                                    <div class="card-body">
+                                        <h5 class="card-title" data-translate="product1Title">Zeolita Granular</h5>
+                                        <p class="card-text" data-translate="product1Desc">Formato ideal para mejorar la estructura del suelo y la retención de nutrientes. Disponible en diferentes granulometrías.</p>
+                                        <h6 class="mt-3">Aplicaciones:</h6>
+                                        <ul class="product-features">
+                                            <li data-translate="product1App1">Mejora de suelos agrícolas</li>
+                                            <li data-translate="product1App2">Sustrato para plantas ornamentales</li>
+                                            <li data-translate="product1App3">Filtración de agua</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-white border-0 text-end">
+                                        <a href="#contact" data-page="contact" class="btn btn-outline-primary nav-link-dynamic" data-translate="requestInfo">Solicitar información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 2 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card product-card h-100">
+                                    <img src="img/product2.jpg" class="card-img-top" alt="Zeolita en Polvo">
+                                    <div class="card-body">
+                                        <h5 class="card-title" data-translate="product2Title">Zeolita en Polvo</h5>
+                                        <p class="card-text" data-translate="product2Desc">Alta superficie de contacto, perfecta para aplicaciones de filtración, tratamiento de aguas y como aditivo en alimentación animal.</p>
+                                        <h6 class="mt-3">Aplicaciones:</h6>
+                                        <ul class="product-features">
+                                            <li data-translate="product2App1">Tratamiento de aguas residuales</li>
+                                            <li data-translate="product2App2">Aditivo para piensos animales</li>
+                                            <li data-translate="product2App3">Formulación de fertilizantes</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-white border-0 text-end">
+                                        <a href="#contact" data-page="contact" class="btn btn-outline-primary nav-link-dynamic" data-translate="requestInfo">Solicitar información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Producto 3 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card product-card h-100">
+                                    <img src="img/product3.jpg" class="card-img-top" alt="Zeolita en Pellets">
+                                    <div class="card-body">
+                                        <h5 class="card-title" data-translate="product3Title">Zeolita en Pellets</h5>
+                                        <p class="card-text" data-translate="product3Desc">Formato compactado para liberación gradual de nutrientes y fácil aplicación en agricultura extensiva e intensiva.</p>
+                                        <h6 class="mt-3">Aplicaciones:</h6>
+                                        <ul class="product-features">
+                                            <li data-translate="product3App1">Cultivos extensivos</li>
+                                            <li data-translate="product3App2">Jardinería profesional</li>
+                                            <li data-translate="product3App3">Suelos con baja retención de agua</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-white border-0 text-end">
+                                        <a href="#contact" data-page="contact" class="btn btn-outline-primary nav-link-dynamic" data-translate="requestInfo">Solicitar información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de especificaciones técnicas -->
+                <section class="bg-light py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <h2 class="mb-4" data-translate="techSpecsTitle">Especificaciones Técnicas</h2>
+                                <p class="mb-4" data-translate="techSpecsDesc">Nuestra zeolita cumple con los estándares internacionales de calidad y es sometida a rigurosos controles durante todo el proceso de producción.</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th data-translate="propertyTitle">Propiedad</th>
+                                                <th data-translate="valueTitle">Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-translate="cec">Capacidad de Intercambio Catiónico (CIC)</td>
+                                                <td>120-150 meq/100g</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="waterRetention">Retención de Agua</td>
+                                                <td>40-60%</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="bulkDensity">Densidad Aparente</td>
+                                                <td>0.8-1.2 g/cm³</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="ph">pH</td>
+                                                <td>6.5-7.5</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-translate="purity">Pureza</td>
+                                                <td>>90%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="rounded-4 overflow-hidden shadow-lg">
+                                    <img src="img/technical-analysis.jpg" alt="Análisis técnico de zeolita" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Insertar aquí contenido de benefits.html -->
+        <div id="page-benefits" class="page-content">
+            <main>
+                <!-- Banner superior -->
+                <section class="page-banner">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold" data-translate="benefitsTitle">Beneficios de la Zeolita</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#home" data-page="home" data-translate="home">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" data-translate="benefits">Beneficios</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Sección de introducción a los beneficios -->
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <p class="lead mb-4" data-translate="benefitsIntro">La zeolita natural es un mineral versátil con múltiples aplicaciones y beneficios para la agricultura, el medio ambiente y diversos sectores industriales.</p>
+                                <p data-translate="benefitsInfo">La zeolita es un mineral versátil que ofrece múltiples beneficios tanto para la agricultura como para la industria y el medio ambiente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <!-- Beneficio 1 -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="benefit-item text-center">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <h4 class="mt-4 mb-3" data-translate="benefit1Title">Mejora del Suelo</h4>
+                                    <p data-translate="benefit1">Mejora la fertilidad del suelo y su estructura, facilitando el desarrollo de las raíces.</p>
+                                    <ul class="benefit-list">
+                                        <li data-translate="benefit1Point1">Mejor estructura del suelo</li>
+                                        <li data-translate="benefit1Point2">Mayor aireación</li>
+                                        <li data-translate="benefit1Point3">Previene la compactación</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Beneficio 2 -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="benefit-item text-center">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                    <h4 class="mt-4 mb-3" data-translate="benefit2Title">Retención de Agua</h4>
+                                    <p data-translate="benefit2">Aumenta la retención de agua, reduciendo la frecuencia de riego y ahorrando recursos hídricos.</p>
+                                    <ul class="benefit-list">
+                                        <li data-translate="benefit2Point1">30-40% menos agua</li>
+                                        <li data-translate="benefit2Point2">Liberación controlada</li>
+                                        <li data-translate="benefit2Point3">Menor estrés hídrico</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Beneficio 3 -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="benefit-item text-center">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <h4 class="mt-4 mb-3" data-translate="benefit3Title">Ecológico</h4>
+                                    <p data-translate="benefit3">Reduce la contaminación ambiental al minimizar la lixiviación de fertilizantes y pesticidas.</p>
+                                    <ul class="benefit-list">
+                                        <li data-translate="benefit3Point1">Menor contaminación</li>
+                                        <li data-translate="benefit3Point2">100% natural</li>
+                                        <li data-translate="benefit3Point3">Regeneración de suelos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Beneficio 4 -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="benefit-item text-center">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+                                    <h4 class="mt-4 mb-3" data-translate="benefit4Title">Optimización</h4>
+                                    <p data-translate="benefit4">Optimiza el uso de fertilizantes y nutrientes, mejorando la eficiencia y reduciendo costos.</p>
+                                    <ul class="benefit-list">
+                                        <li data-translate="benefit4Point1">25-35% menos fertilizantes</li>
+                                        <li data-translate="benefit4Point2">Mayor disponibilidad</li>
+                                        <li data-translate="benefit4Point3">Reducción de costes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- Insertar aquí contenido de experiments.html -->
+        <div id="page-experiments" class="page-content">
+            <main>
+                <!-- Banner superior -->
+                <section class="page-banner">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold" data-translate="experimentsTitle">Experimentos de Campo</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#home" data-page="home" data-translate="home">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" data-translate="experiments">Experimentos</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Introducción a los experimentos -->
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <p class="lead mb-3" data-translate="experimentsDesc">
+                                    Hemos realizado numerosos experimentos de campo con zeolita en diferentes cultivos,
+                                    obteniendo resultados significativos en la mejora de la calidad y el rendimiento.
+                                </p>
+                                <p data-translate="experimentsInfo">
+                                    Nuestros experimentos están respaldados por investigaciones científicas y
+                                    colaboraciones con universidades locales e internacionales. Los resultados
+                                    son verificables y demuestran el potencial de la zeolita en la agricultura moderna.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Experimentos en Tabs -->
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <ul class="nav nav-pills mb-4 justify-content-center" id="experimentsTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="exp1-tab" data-bs-toggle="pill" data-bs-target="#exp1" type="button">
+                                            <span data-translate="experiment1Tab">Proyecto Al-Ferdous</span>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="exp2-tab" data-bs-toggle="pill" data-bs-target="#exp2" type="button">
+                                            <span data-translate="experiment2Tab">Granja Rabeea</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contenido de los experimentos -->
+                <section class="bg-light py-5">
+                    <div class="container">
+                        <div class="tab-content" id="experimentsTabContent">
+                            <!-- Experimento 1 -->
+                            <div class="tab-pane fade show active" id="exp1" role="tabpanel">
+                                <div class="experiment-card">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-4 mb-lg-0">
+                                            <h3 class="mb-4" data-translate="experiment1Title">Proyecto Al-Ferdous - Patatas Lady Rosetta</h3>
+                                            <p class="mb-4" data-translate="experiment1Desc">
+                                                En este experimento, comparamos el crecimiento de patatas cultivadas con y sin zeolita.
+                                                Los resultados mostraron una mejora del 170% en la calidad general de las patatas cultivadas con zeolita.
+                                            </p>
+                                            <ul class="experiment-results">
+                                                <li data-translate="experiment1Result1">Mayor rendimiento por hectárea</li>
+                                                <li data-translate="experiment1Result2">Mejor resistencia a enfermedades</li>
+                                                <li data-translate="experiment1Result3">Reducción del 40% en el uso de agua</li>
+                                                <li data-translate="experiment1Result4">Aumento del 25% en el contenido de nutrientes</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row experiment-gallery">
+                                                <div class="col-12 mb-4">
+                                                    <div class="experiment-image-comparison">
+                                                        <div class="comparison-item">
+                                                            <div class="comparison-image-wrapper">
+                                                                <img src="img/experiment1-with-zeolite.jpg" class="img-fluid rounded-4" alt="Patatas con Zeolita">
+                                                                <div class="image-label-green" data-translate="withZeolite">Con Zeolita</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comparison-item">
+                                                            <div class="comparison-image-wrapper">
+                                                                <img src="img/experiment1-no-zeolite.jpg" class="img-fluid rounded-4" alt="Patatas sin Zeolita">
+                                                                <div class="image-label-red" data-translate="withoutZeolite">Sin Zeolita</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Experimento 2 -->
+                            <div class="tab-pane fade" id="exp2" role="tabpanel">
+                                <div class="experiment-card">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-4 mb-lg-0">
+                                            <h3 class="mb-4" data-translate="experiment2Title">Granja Rabeea - Patatas Almendra</h3>
+                                            <p class="mb-4" data-translate="experiment2Desc">
+                                                En este experimento, se cultivaron patatas Almendra con y sin zeolita.
+                                                Las patatas cultivadas con zeolita mostraron una mejor forma, peso y tamaño,
+                                                además de una mejora notable en los tallos y hojas.
+                                            </p>
+                                            <ul class="experiment-results">
+                                                <li data-translate="experiment2Result1">Incremento del 35% en producción</li>
+                                                <li data-translate="experiment2Result2">Mejor calidad y uniformidad</li>
+                                                <li data-translate="experiment2Result3">Reducción del 30% en fertilizantes</li>
+                                                <li data-translate="experiment2Result4">Mayor vida útil post-cosecha</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row experiment-gallery">
+                                                <div class="col-12 mb-4">
+                                                    <div class="experiment-image-comparison">
+                                                        <div class="comparison-item">
+                                                            <div class="comparison-image-wrapper">
+                                                                <img src="img/experiment2-with-zeolite.jpg" class="img-fluid rounded-4" alt="Patatas con Zeolita">
+                                                                <div class="image-label-green" data-translate="withZeolite">Con Zeolita</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comparison-item">
+                                                            <div class="comparison-image-wrapper">
+                                                                <img src="img/experiment2-no-zeolite.jpg" class="img-fluid rounded-4" alt="Patatas sin Zeolita">
+                                                                <div class="image-label-red" data-translate="withoutZeolite">Sin Zeolita</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <!-- Insertar aquí contenido de contact.html -->
+        <div id="page-contact" class="page-content">
+            <main>
+                <!-- Banner superior -->
+                <section class="page-banner">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold" data-translate="contactTitle">Contáctanos</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#home" data-page="home" data-translate="home">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" data-translate="contact">Contacto</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Sección de contacto -->
+                <section class="section-padding">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <p class="lead mb-4" data-translate="contactIntro">¿Interesado en nuestros productos? Ponte en contacto con nuestro equipo para resolver todas tus dudas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-5">
+                            <div class="col-lg-5">
+                                <div class="contact-info card shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h4 class="mb-4" data-translate="contactInfoTitle">Información de Contacto</h4>
+                                        
+                                        <div class="contact-item mb-4">
+                                            <div class="icon"><i class="fas fa-user-tie"></i></div>
+                                            <div class="content">
+                                                <h5 data-translate="contactPerson1Title">Director Ejecutivo</h5>
+                                                <p><strong>Sr. Husain Elayan:</strong> +964 784 158 1067</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item mb-4">
+                                            <div class="icon"><i class="fas fa-user-cog"></i></div>
+                                            <div class="content">
+                                                <h5 data-translate="contactPerson2Title">Jefe de Ingeniería</h5>
+                                                <p><strong>Ing. Ahmad Al Hamdani:</strong> +964 780 387 0016</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item mb-4">
+                                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                                            <div class="content">
+                                                <h5 data-translate="emailTitle">Correo Electrónico</h5>
+                                                <p>info@nr-zeo.com</p>
+                                                <p>sales@nr-zeo.com</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                            <div class="content">
+                                                <h5 data-translate="contactLocationTitle">Oficinas Centrales</h5>
+                                                <p data-translate="contactLocation">Bagdad, Irak</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-7">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="mb-4" data-translate="formTitle">Envíanos un mensaje</h4>
+                                        <form id="contactForm" action="https://formspree.io/f/xpwpqlga" method="POST">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="name" class="form-label" data-translate="formName">Nombre</label>
+                                                    <input type="text" class="form-control" id="name" name="name" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label" data-translate="formEmail">Correo electrónico</label>
+                                                    <input type="email" class="form-control" id="email" name="email" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="phone" class="form-label" data-translate="formPhone">Teléfono</label>
+                                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="company" class="form-label" data-translate="formCompany">Empresa/Organización</label>
+                                                    <input type="text" class="form-control" id="company" name="company">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="subject" class="form-label" data-translate="formSubject">Asunto</label>
+                                                    <input type="text" class="form-control" id="subject" name="subject" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="message" class="form-label" data-translate="formMessage">Mensaje</label>
+                                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                                                        <label class="form-check-label" for="privacy" data-translate="privacyPolicy">
+                                                            He leído y acepto la política de privacidad
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <button type="submit" class="btn btn-primary btn-lg px-5" data-translate="submit">Enviar Mensaje</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mapa y ubicación -->
+                <section class="py-5 bg-light">
+                    <div class="container">
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <h2 class="mb-4" data-translate="locationTitle">Nuestra Ubicación</h2>
+                                <p data-translate="locationDesc">Estamos ubicados estratégicamente para atender a clientes de todo el Medio Oriente y exportar a nivel internacional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106713.91340559444!2d44.28340234562145!3d33.312327121463976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1556302d8a143df5%3A0x89a3366598665934!2sBaghdad%2C%20Iraq!5e0!3m2!1sen!2ses!4v1654543764128!5m2!1sen!2ses" 
+                                        width="100%" height="450" style="border:0; border-radius: 16px;" allowfullscreen="" 
+                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.png" alt="NR-Zeo" class="footer-logo mb-4" height="60">
+                    <p class="mb-4" data-translate="footerAbout">NR-Zeo es una empresa líder en la producción y distribución de zeolita natural para aplicaciones agrícolas, industriales y ambientales.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="quickLinks">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-page="home" class="nav-link-dynamic" data-translate="home">Inicio</a></li>
+                        <li><a href="#about" data-page="about" class="nav-link-dynamic" data-translate="about">Quiénes Somos</a></li>
+                        <li><a href="#products" data-page="products" class="nav-link-dynamic" data-translate="products">Productos</a></li>
+                        <li><a href="#benefits" data-page="benefits" class="nav-link-dynamic" data-translate="benefits">Beneficios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="services">Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="#products" data-page="products" class="nav-link-dynamic" data-translate="service1">Asesoramiento Técnico</a></li>
+                        <li><a href="#contact" data-page="contact" class="nav-link-dynamic" data-translate="service2">Proyectos Personalizados</a></li>
+                        <li><a href="#contact" data-page="contact" class="nav-link-dynamic" data-translate="service3">Distribución Internacional</a></li>
+                        <li><a href="#experiments" data-page="experiments" class="nav-link-dynamic" data-translate="experiments">Experimentos de Campo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="contactUs">Contáctanos</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> <span>+964 784 158 1067</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nr-zeo.com</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Bagdad, Irak</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-3">
+            
+            <div class="row align-items-center">
+                <div la="col-md-6">
+                    <p class="mb-md-0">&copy; 2023-2025 NR-Zeo. <span data-translate="rights">Todos los derechos reservados.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón para volver arriba -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <!-- Indicador de carga -->
+    <div id="loader-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

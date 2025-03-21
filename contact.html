@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contáctanos | NR-Zeo</title>
+    
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación principal fija -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo de la empresa -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="NR-Zeo" height="50">
+                </a>
+                
+                <!-- Selector de idioma -->
+                <div class="language-selector d-flex me-3 order-lg-3">
+                    <button class="lang-btn btn" onclick="setLanguage('es')">ES</button>
+                    <button class="lang-btn btn ms-2" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn btn ms-2" onclick="setLanguage('ar')">AR</button>
+                </div>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse order-lg-2" id="navbarMain">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-translate="home"><i class="fas fa-home me-1"></i> <span>Inicio</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" data-translate="about"><i class="fas fa-info-circle me-1"></i> <span>Quiénes Somos</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html" data-translate="products"><i class="fas fa-box me-1"></i> <span>Productos</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="benefits.html" data-translate="benefits"><i class="fas fa-leaf me-1"></i> <span>Beneficios</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="experiments.html" data-translate="experiments"><i class="fas fa-flask me-1"></i> <span>Experimentos</span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html" data-translate="contact"><i class="fas fa-envelope me-1"></i> <span>Contacto</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner superior -->
+        <section class="page-banner">
+            <div class="container">
+                <h1 class="display-4 fw-bold" data-translate="contactTitle">Contáctanos</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html" data-translate="home">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" data-translate="contact">Contacto</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <p class="lead mb-4" data-translate="contactIntro">¿Interesado en nuestros productos? Ponte en contacto con nuestro equipo para resolver todas tus dudas.</p>
+                    </div>
+                </div>
+                
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <div class="contact-info card shadow-sm h-100">
+                            <div class="card-body">
+                                <h4 class="mb-4" data-translate="contactInfoTitle">Información de Contacto</h4>
+                                
+                                <div class="contact-item mb-4">
+                                    <div class="icon"><i class="fas fa-user-tie"></i></div>
+                                    <div class="content">
+                                        <h5 data-translate="contactPerson1Title">Director Ejecutivo</h5>
+                                        <p><strong>Sr. Husain Elayan:</strong> +964 784 158 1067</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item mb-4">
+                                    <div class="icon"><i class="fas fa-user-cog"></i></div>
+                                    <div class="content">
+                                        <h5 data-translate="contactPerson2Title">Jefe de Ingeniería</h5>
+                                        <p><strong>Ing. Ahmad Al Hamdani:</strong> +964 780 387 0016</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item mb-4">
+                                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                                    <div class="content">
+                                        <h5 data-translate="emailTitle">Correo Electrónico</h5>
+                                        <p>info@nr-zeo.com</p>
+                                        <p>sales@nr-zeo.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="content">
+                                        <h5 data-translate="contactLocationTitle">Oficinas Centrales</h5>
+                                        <p data-translate="contactLocation">Bagdad, Irak</p>
+                                    </div>
+                                </div>
+                                
+                                <hr class="my-4">
+                                
+                                <h5 class="mb-3" data-translate="officeHours">Horario de atención</h5>
+                                <p><span data-translate="weekdays">Lunes a viernes:</span> 9:00 AM - 5:00 PM</p>
+                                <p><span data-translate="weekends">Sábados:</span> 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="mb-4" data-translate="formTitle">Envíanos un mensaje</h4>
+                                <form id="contactForm" action="https://formspree.io/f/xpwpqlga" method="POST">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="name" class="form-label" data-translate="formName">Nombre</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label" data-translate="formEmail">Correo electrónico</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label" data-translate="formPhone">Teléfono</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="company" class="form-label" data-translate="formCompany">Empresa/Organización</label>
+                                            <input type="text" class="form-control" id="company" name="company">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="subject" class="form-label" data-translate="formSubject">Asunto</label>
+                                            <input type="text" class="form-control" id="subject" name="subject" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label" data-translate="formMessage">Mensaje</label>
+                                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="privacy" required>
+                                                <label class="form-check-label" for="privacy" data-translate="privacyPolicy">
+                                                    He leído y acepto la política de privacidad
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="submit" class="btn btn-primary btn-lg px-5" data-translate="submit">Enviar Mensaje</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa y ubicación -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mb-4" data-translate="locationTitle">Nuestra Ubicación</h2>
+                        <p data-translate="locationDesc">Estamos ubicados estratégicamente para atender a clientes de todo el Medio Oriente y exportar a nivel internacional.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106713.91340559444!2d44.28340234562145!3d33.312327121463976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1556302d8a143df5%3A0x89a3366598665934!2sBaghdad%2C%20Iraq!5e0!3m2!1sen!2ses!4v1654543764128!5m2!1sen!2ses" 
+                                width="100%" height="450" style="border:0; border-radius: 16px;" allowfullscreen="" 
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/logo.png" alt="NR-Zeo" class="footer-logo mb-4" height="60">
+                    <p class="mb-4" data-translate="footerAbout">NR-Zeo es una empresa líder en la producción y distribución de zeolita natural para aplicaciones agrícolas, industriales y ambientales.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="quickLinks">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="home">Inicio</a></li>
+                        <li><a href="about.html" data-translate="about">Quiénes Somos</a></li>
+                        <li><a href="products.html" data-translate="products">Productos</a></li>
+                        <li><a href="benefits.html" data-translate="benefits">Beneficios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="services">Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" data-translate="service1">Asesoramiento Técnico</a></li>
+                        <li><a href="#" data-translate="service2">Proyectos Personalizados</a></li>
+                        <li><a href="#" data-translate="service3">Distribución Internacional</a></li>
+                        <li><a href="experiments.html" data-translate="experiments">Experimentos de Campo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" data-translate="contactUs">Contáctanos</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> <span>+964 784 158 1067</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@nr-zeo.com</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Bagdad, Irak</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-3">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-md-0">&copy; 2023-2025 NR-Zeo. <span data-translate="rights">Todos los derechos reservados.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
